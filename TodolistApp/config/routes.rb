@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'main/home'
+  root 'main#home'
+  get 'error' => 'main#error'
+  post '' => 'main#add'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

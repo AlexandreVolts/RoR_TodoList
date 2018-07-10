@@ -1,5 +1,12 @@
-<h1>Todolist App</h1>
-<p>Welcome to this great todolist app !</p>
-<ul>
-  <li><%=@todo %></li>
-</ul>
+<section>
+  <ul>
+    <% @todos.each do |todo| %>
+    <li><%=todo.content %> to do by <strong><%=todo.author %></strong></li>
+    <% end %>
+  </ul>
+  <%= form_tag "/", method: "post" do %>
+  <input type="text" name="content" placeholder="Ex: Faire les courses" />
+  <input type="text" name="author" placeholder="Your name here" />
+  <input type="submit" value="Ajouter" />
+  <% end %>
+</section>
