@@ -1,12 +1,12 @@
 <section>
   <ul>
     <% @todos.each do |todo| %>
-    <li><%=todo.content %> to do by <strong><%=todo.author %></strong></li>
+    <li>✘ <a href="/todo/<%=todo.id %>"><%=todo.content %></a> to do by <strong><%=todo.author %></strong> </li>
     <% end %>
   </ul>
   <%= form_tag "/", method: "post" do %>
   <input type="text" name="content" placeholder="Ex: Faire les courses" />
-  <input type="text" name="author" placeholder="Your name here" />
+  <input type="text" name="author" placeholder="Votre nom/pseudo ici" />
   <input type="submit" value="Ajouter" />
   <% end %>
 </section>
