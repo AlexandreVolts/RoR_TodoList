@@ -1,4 +1,9 @@
-<h2><%=@todo.content %></h2>
-<p><i>To do by <%=@todo.author %></i></p>
-<p>Task added the <%=@todo.date %></p>
-<a href="/">Retour</a>
+<section>
+  <h2><%=@todo.content %></h2>
+  <p><i>To do by <%=@todo.author %></i></p>
+  <p>Task added the <%=@todo.date %></p>
+  <%= form_tag "/todo/#{@todo.id}", method: "delete" do %>
+  <input type="submit" value="Hey ! I ended this task !(delete)" />
+  <% end %>
+  <p><a href="/">Go back</a></p>
+</section>

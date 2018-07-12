@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 5px 20px;
+    background-image: linear-gradient(black, rgb(75, 50, 50));
+    color: lightgray;
+}
+header * {
+    margin: 0;
+    padding: 1px;
+}
+header p {
+    margin-left: 40px;
+}
